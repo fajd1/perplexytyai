@@ -3,127 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Explore interesting websites with useful information and insights.">
-    <meta name="keywords" content="explore, websites, travel, AI, technology">
-    <title>Welcome</title>
+    <title>Redirecting...</title>
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-            color: #1e293b;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: #0f172a;
-        }
-        .list-view {
-            width: 90%;
-            max-width: 900px;
-            margin: 20px 0;
-        }
-        .list-tile {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #e2e8f0;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            text-decoration: none;
-            color: #1e293b;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .list-tile:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
-        }
-        .list-tile .site-info {
-            flex: 1;
-            text-align: left;
-        }
-        .list-tile .site-info h2 {
+            background-color: #f8f9fa;
             margin: 0;
-            font-size: 1.8rem;
-            color: #0f172a;
         }
-        .list-tile .site-info p {
-            margin: 12px 0 0;
-            font-size: 1.1rem;
-            color: #4b5563;
-        }
-        .list-tile .site-logo {
-            width: 80px;
-            height: 80px;
-            margin-left: 30px;
-            border-radius: 12px;
-            object-fit: cover;
-        }
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 1rem;
-            color: #4b5563;
-        }
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #0f172a;
-            color: #f3f4f6;
-            padding: 10px 15px;
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
             border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.5rem;
-            display: none;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
-</head>
-<body>
-    <h1>Explore Interesting Websites</h1>
-
-    <div class="list-view">
-        <a href="https://www.dest8.com" class="list-tile" target="_blank">
-            <div class="site-info">
-                <h2>Dest8.com</h2>
-                <p>Your ultimate travel guide with breathtaking visuals and insider travel tips.</p>
-            </div>
-            <img src="dest8logo.png" alt="Dest Logo" class="site-logo">
-        </a>
-        <a href="https://perplexity.com" class="list-tile" target="_blank">
-            <div class="site-info">
-                <h2>Perplexity AI</h2>
-                <p>Discover advanced AI solutions transforming industries with cutting-edge innovation.</p>
-            </div>
-            <img src="perplexity-logo.png" alt="Perplexity Logo" class="site-logo">
-        </a>
-    </div>
-
-    <div class="back-to-top" onclick="scrollToTop()">⬆</div>
-
-    <footer>
-        &copy; 2025 Explore Sites. All rights reserved.
-    </footer>
-
-    <script>
-        window.onscroll = function() {
-            document.querySelector('.back-to-top').style.display = window.scrollY > 200 ? 'block' : 'none';
-        };
-        function scrollToTop() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-    </script>
 <!-- Default Statcounter code for PerplexytyAi
 http://perplexytyai.com/ -->
 <script type="text/javascript">
@@ -134,12 +36,21 @@ var sc_security="8fcba750";
 <script type="text/javascript"
 src="https://www.statcounter.com/counter/counter.js"
 async></script>
-<noscript><div class="statcounter"><a title="free hit
-counter" href="https://statcounter.com/"
-target="_blank"><img class="statcounter"
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
 src="https://c.statcounter.com/13076904/0/8fcba750/1/"
-alt="free hit counter"
+alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
+    <script>
+        // Wait for the Statcounter script to execute before redirecting
+        setTimeout(function() {
+            window.location.href = "https://www.dest8.com/";
+        }, 1000); // 1-second delay
+    </script>
+</head>
+<body>
+    <div class="loader"></div>
 </body>
 </html>
